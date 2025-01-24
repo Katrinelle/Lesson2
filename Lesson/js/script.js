@@ -54,6 +54,8 @@
 // console.log(typeof value);
 
 // const newValue = Number(value);
+// console.log(newValue);
+
 // console.log(typeof newValue);
 
 // const test = Number("qwerty");
@@ -109,27 +111,27 @@
 // Піднесення до степеня **.
 
 // // // Додавання
-// console.log(2 + 2);
+// console.log(2 + 2); //4
 
 // // // Віднімання
-// console.log(10 - 4);
+// console.log(10 - 4); //6
 
 // // // Множення
-// console.log(5 * 5);
+// console.log(5 * 5); //25
 
 // // // Ділення
-// console.log(6 / 2);
+// console.log(6 / 2); //3
 
 //Остача від ділення %
 
-// console.log(8 % 3);
-// console.log(10 % 3);
-// console.log(10 % 2);
+// console.log(8 % 3); //2
+// console.log(10 % 3); //1
+// console.log(10 % 2); //0
 
 //Піднесення до степеня **
 
-// console.log(5 ** 2);
-// console.log(4 ** 4);
+// console.log(5 ** 2); //25
+// console.log(4 ** 4); // 256 - це 4 у 4-й степені, тобто 4*4*4*4=256
 
 // -------Оператори порівняння------//
 
@@ -142,7 +144,25 @@
 // a === b //- строго дорівнює
 // a !== b //- строго не дорівнює
 
+// console.log(5 > 3); //true
+// console.log(5 < 3); // false
+// console.log(5 >= 5); //true
+// console.log(7 <= 3); // false
+
+// let value = 0; //number
+// console.log(value == 0); // true
+// console.log(typeof value); //number
+
+// let value = "0"; //string
+// console.log(value === 0); // false
+
+// let value = "0"; //string
+// console.log(value == 0); // true
+
 // == приведення до типу
+
+// console.log(5 != 5); //5 не дорівнює 5 false
+// console.log(5 !== 5); //5 строго не дорівнює 5 false
 
 // ----------------------------------//
 // ----------------------------------//
@@ -150,42 +170,106 @@
 // ----------------------------------//
 // ----------------------------------//
 
-//   -----and (&&)------  //
+//   -----and (&&)------  // повинні бути виконені обидві умови
+
+// console.log(5 == 5 && 6 > 3); //true
+// console.log(5 === 6 && 6 > 3); //false
+// console.log(6 + 3 >= 9 && 8 + 1 === 9); //true
 
 // console.log(5 === 6 && 6 > 3);
 // console.log(6 + 3 >= 9 && 8 + 1 === 9);
 
-//   -----or (||)------ //
+//   -----or (||)------ // або повинна бути виконана хоча б одна умова
+
+// console.log(5 + 5 === 25 || 2 * 2 === 6); //false
+// console.log(5 * 5 === 25 || 2 * 2 === 6); //true
 
 // console.log(5 * 5 === 25 || 2 * 2 === 6);
 
-//   -----not (!) ------ //
+//   -----not (!) ------ // НЕ
 
-// console.log(!false);
+// console.log(5 !== 4); //true
+
+// console.log(true); // true
+// console.log(!true); // false
+// console.log(!false); //true
 
 // ----------------------------------//
 // ----------------------------------//
-// Умови if/else
+// Умови if/else якщо/ще
 // ----------------------------------//
 // ----------------------------------//
 
 //--- одинарні
+
+// if (5 + 5 === 10) {
+//   console.log("Hello");
+// } //Helo
+
+// if (5 * 5 === 10) {
+//   console.log("Hello");
+// } //не виконується, тому що 5*5 = 25
+
+// if (5 + 5 === 25) {
+//   console.log("1");
+// } //не виконується, тому що 5+5 = 10
+
+// if (5 + 5 === 25) {
+//   console.log("1");
+// } else {
+//   console.log("2");
+// } //2 якщо if не виконується, тому що 5+5 = 10, переходе до виконання else
+
 // if (5 * 5 === 25) {
 //   console.log("1");
 // } else {
 //   console.log("2");
-// }
+// } //1 if виконується, тож не переходе до виконання else
+
+// if (2 + 2 === 4) {
+//   console.log("Hello");
+// } else {
+//   console.log("No Hello");
+// } //Hello
 
 // if (2 + 2 === 6) {
 //   console.log("Hello");
 // } else {
 //   console.log("No Hello");
+// } // No Hello
+
+// багато
+
+/// ------Тернарний оператор------/// той же самий if/else тільки в скороченій версії
+
+// 2 + 2 === 4 ? console.log(1) : console.log("2"); //1
+// 5 * 5 === 24 ? console.log("Si") : console.log("Not"); //Not
+
+// якщо багато додатковиї умов:
+
+// if (5 + 5 === 7) {
+//   console.log("SomethingYes");
+// } else if (2 + 2 === 4) {
+//   console.log("SomethingNo");
+// } else {
+//   console.log("NothingNo"); //SomethingNo
 // }
 
-/// ------Тернарний оператор------///
+// if (5 + 5 === 7) {
+//   console.log("SomethingYes");
+// } else if (2 + 2 === 6) {
+//   console.log("SomethingNo");
+// } else {
+//   console.log("NothingNo"); //NothingNo
+// }
 
-// 2 + 2 === 4 ? console.log("1") : console.log("2");
-// 5 * 5 === 24 ? console.log(true) : console.log(false);
+// if (5 + 5 === 10) {
+//   console.log("SomethingYes");
+// } else if (2 + 2 === 6) {
+//   console.log("SomethingNo");
+// } else {
+//   console.log("NothingNo"); //SomethingYes
+// }
 
 // if (5 + 5 === 10) {
 //   console.log("5+5 ===10");
@@ -196,20 +280,70 @@
 // }
 
 // let leng = "ua";
-
 // if (leng === "ua") {
-//   console.log("Понеділок");
-// } else if (leng === "en") {
 //   console.log("Monday");
+// } else if (leng === "en") {
+//   console.log("Tuesday");
 // } else {
 //   console.log("Reset");
-// }
+// } // Monday
+
+// let leng = "en";
+
+// if (leng === "ua") {
+//   console.log("Monday");
+// } else if (leng === "en") {
+//   console.log("Tuesday");
+// } else {
+//   console.log("Reset");
+// } // Tuesday
+
+// let leng = "fr";
+// if (leng === "ua") {
+//   console.log("Monday");
+// } else if (leng === "en") {
+//   console.log("Tuesday");
+// } else {
+//   console.log("Reset");
+// } // Reset
 
 // ----------------------------------//
 // ----------------------------------//
-// switch/case
+// switch/case аналог if/else
 // ----------------------------------//
 // ----------------------------------//
+
+// let num = 10;
+
+// switch (num) {
+//   case 0:
+//     console.log(0);
+//     break;
+
+//   case 5:
+//     console.log(5);
+//     break;
+
+//   case 10:
+//     console.log(10);
+//     break;
+// } //10
+
+// такеж саме
+
+// switch (5) {
+//   case 0:
+//     console.log(0);
+//     break;
+
+//   case 5:
+//     console.log(5);
+//     break;
+
+//   case 10:
+//     console.log(10);
+//     break;
+// } //5
 
 // let cost = null;
 // const sub = "premium";
@@ -218,16 +352,17 @@
 //   case "free":
 //     cost = 0;
 //     break;
-
 //   case "pro":
 //     cost = 100;
 //     break;
-
 //   case "premium":
 //     cost = 500;
+
+//   default:
+//     console.log("Invalid sub");
 // }
 
-// console.log(cost);
+// console.log(cost); //500
 
 // ----------------------------------//
 // ----------------------------------//
@@ -235,7 +370,7 @@
 // ----------------------------------//
 // ----------------------------------//
 
-// const min = prompt("Введіть хвилину");
+// const min = prompt("ВВедіть хвіліну");
 
 // if (min >= 0 && min <= 14) {
 //   console.log("Перша чверть");
@@ -246,32 +381,40 @@
 // } else if (min >= 45 && min <= 59) {
 //   console.log("Четверта чверть");
 // } else {
-//   console.log("ВВедіть іншу цифру");
+//   console.log("Введіть іншу ціфру");
 // }
 
-// const value = prompt("Введіть назву товару").toLowerCase();
+// const value = prompt("Введіть назву товару").toLowerCase(); //для того, щоб не реагувало на регістр вводимих даних
 // let cost;
 
 // switch (value) {
 //   case "яблуко":
 //     cost = 10;
-//     alert(`Вартість ${value} ${cost} гривень`);
-//     break;
-//   case "груша":
-//     cost = 15;
-//     alert(`Вартість ${value} ${cost} гривень`);
-//     break;
-//   case "кавун":
-//     cost = 50;
-//     alert(`Вартість ${value} ${cost} гривень`);
+//     alert(`${value} коштує ${cost} грівень`);
 //     break;
 //   case "вишня":
+//     cost = 50;
+//     alert(`${value} коштує ${cost} грівень`);
+//     break;
+//   case "груша":
+//     cost = 45;
+//     alert(`${value} коштує ${cost} грівень`);
+//     break;
+//   case "кавун":
 //     cost = 70;
-//     alert(`Вартість ${value} ${cost} гривень`);
+//     alert(`${value} коштує ${cost} грівень`);
+//     break;
+//   case "чорниця":
+//     cost = 110;
+//     alert(`${value} коштує ${cost} грівень`);
+//     break;
+//   case "диня":
+//     cost = 150;
+//     alert(`${value} коштує ${cost} грівень`);
 //     break;
 
 //   default:
-//     alert(`Товару ${value} немає в наявності`);
+//     alert(`Товару ${value}, немає в наявності`);
 // }
 
 // const num = 8;
