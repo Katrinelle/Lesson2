@@ -33,13 +33,13 @@
 //   console.log("true");
 // } // true
 
-// let value = "qwerty";
-// if (value === "test") {
+// let value = "test";
+// if (value === "qwerty") {
 //   console.log("true");
 // }
 
-// let value = "true";
-// if (value === "test") {
+// let value = "test";
+// if (value === true) {
 //   console.log("true");
 // }
 
@@ -74,8 +74,9 @@
 //Зробіть сервіс який отримує число від 1 до 12
 // виведіть місяць який дорівнює числу
 
-// let value = "10";
-// switch (value) {
+// const month = prompt("Введіть чісло від 1 до 12");
+
+// switch (month) {
 //   case "1":
 //     console.log("Січень");
 //     break;
@@ -112,20 +113,19 @@
 //   case "12":
 //     console.log("Грудень");
 //     break;
+//   default:
+//     alert(`ВВедіть чісло від 1 до 12!`);
 // } // Жовтень
 
 //Зробіть сервіс який отримує тризначне число
 //Поверніть користувачу сумму цих чисел
 
-// const EnteredNum = prompt("Введіть тризначне число:");
-// const num = parseInt(EnteredNum);
-
-// if (num >= 100 && num <= 999) {
-//   const firstNum = Math.floor(num / 100);
-//   const secondNum = Math.floor((num % 100) / 10);
-//   const thirdNum = num % 10;
-//   const sum = firstNum + secondNum + thirdNum;
-//   alert(`Sum of enterd number ${num} equal ${sum}.`);
+// const number = prompt("Введіть тризначне число");
+// if (number >= 100 && number <= 999) {
+//   const firstNum = Math.floor(number / 100);
+//   const secondNum = Math.floor(Math.floor(number % 100) / 10);
+//   const thirdNum = Math.floor(number % 10);
+//   alert(firstNum + secondNum + thirdNum);
 // } else {
-//   alert(`Введіть, будь ласка, тризначне число від 100 до 999!`);
-// }
+//   alert("Введіть тризначне число!");
+// } // ввожу 123 - повертає 6

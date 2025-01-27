@@ -1,4 +1,17 @@
-// ----------------------------------//
+// оператори
+
+// const b = null;
+// console.log(typeof b); // "object"
+
+// const c = 5;
+// console.log(typeof c); // "number"
+
+// const d = "JavaScript is awesome!";
+// console.log(typeof d); // "string"
+
+// const e = false;
+// console.log(typeof e); // "boolean"
+
 // ----------------------------------//
 // Вивід данних/ Ввід данних
 // ----------------------------------//
@@ -8,19 +21,30 @@
 
 // Виведення
 
-// alert(message);
+// alert - виводе повідомлення у вспливаючому вікні
 
-// console.log(message);
+// alert(message);
+// console.log(message); // вспливло повідомлення
+
+// prompt - виводе вспливаюче модальне вікно для вводу даних
+
+// let age = prompt("Скільки вам років?"); // вспливло вікно з полем для вводу
+// console.log(age); // виведе в консоль цифру, яку ввели у вспливаючому вікні
 
 // Отримання
 
-// confirm
+// confirm - виводе вспливаюче модальне вікно з питанням question
+// та кнопкамі Ок та Скасувати
 
-// const isConfirm = confirm("Please confirm reservation");
-// console.log(isConfirm);
+// const isConfirm = confirm("Please confirm reservation"); // вспливло вікно з питанням і
+// //кнопками отмена та ок
+// console.log(isConfirm); // якщо нажму отмена - false
+// // ok - true
+
+// console.log("Hello"); // Hello
 
 // const test = confirm("Yes or no?");
-// console.log(test);
+// console.log(test); // жму ok - true
 
 // prompt
 // const userName = prompt("Please enter your name:");
@@ -36,33 +60,32 @@
 // ----------------------------------//
 
 // const value = prompt("Please enter a number!");
-// console.log(typeof value); // 'string'
-// console.log(value); // '5'
+// console.log(typeof value); // ok - string отмена - object
+// console.log(value); // якщо ввожу у вспліваючому вікні 5 - отрімую 5
 
 // let value;
 
-// ---String--- //
+// newНазвазмінної перетворення з boolean на string
 
 // value = false;
-// console.log(typeof value);
+// console.log(typeof value); // boolean
 // const newValue = String(value);
-// console.log(typeof newValue);
+// console.log(typeof newValue); // string
 
-// ---Number--- //
+// перетворення з string на Number--- //
 
 // value = "123";
-// console.log(typeof value);
+// console.log(typeof value); // string
 
 // const newValue = Number(value);
-// console.log(newValue);
-
-// console.log(typeof newValue);
+// console.log(typeof newValue); // number
+// console.log(newValue); // 123
 
 // const test = Number("qwerty");
-// console.log(test);
-// console.log(typeof value);
+// console.log(test); // NaN
+// console.log(typeof test); // number
 
-// ---Boolean--- //
+// перетворення на Boolean--- //
 
 // Правила перетворення:
 
@@ -76,8 +99,8 @@
 // console.log(Boolean("вітаю")); // true
 // console.log(Boolean("")); // false
 
-// console.log(Boolean(NaN));
-// console.log(Boolean(null));
+// console.log(Boolean(NaN)); // false
+// console.log(Boolean(null)); // false
 
 // ----------------------------------//
 // ----------------------------------//
@@ -92,14 +115,15 @@
 //Іноді їх називають “аргументами”
 
 //Оператор є унарним, якщо він має один операнд
-//let x = 1;
+// let x = 1;
 
-//x = -x;
+// x = -x;
 
 //Оператор є бінарним, якщо він має два операнди
 
-// let x = 1, y = 3;
-// alert( y - x );
+// let x = 1,
+//   y = 3;
+// alert(y - x);
 
 //JavaScript підтримує такі математичні операції:
 
@@ -113,16 +137,16 @@
 // // // Додавання
 // console.log(2 + 2); //4
 
-// // // Віднімання
+// // // // Віднімання
 // console.log(10 - 4); //6
 
-// // // Множення
+// // // // Множення
 // console.log(5 * 5); //25
 
-// // // Ділення
+// // // // Ділення
 // console.log(6 / 2); //3
 
-//Остача від ділення %
+// //Остача від ділення %
 
 // console.log(8 % 3); //2
 // console.log(10 % 3); //1
@@ -144,6 +168,9 @@
 // a === b //- строго дорівнює
 // a !== b //- строго не дорівнює
 
+// console.log("5>10", 5 > 10); // false
+// console.log("5<10", 5 < 10); // true
+
 // console.log(5 > 3); //true
 // console.log(5 < 3); // false
 // console.log(5 >= 5); //true
@@ -154,23 +181,24 @@
 // console.log(typeof value); //number
 
 // let value = "0"; //string
-// console.log(value === 0); // false
+// console.log(value === 0); // false, тому що змінна string
 
 // let value = "0"; //string
-// console.log(value == 0); // true
+// console.log(value == 0); // true == порівнює різні типи змінних
 
 // == приведення до типу
 
-// console.log(5 != 5); //5 не дорівнює 5 false
-// console.log(5 !== 5); //5 строго не дорівнює 5 false
+// console.log(5 != 5); // false 5 не дорівнює 5
+// console.log(5 !== 5); // false 5 строго не дорівнює 5
 
 // ----------------------------------//
 // ----------------------------------//
-// or -and -not //
+// or (||) and(&&) not (!) null (??) //
 // ----------------------------------//
 // ----------------------------------//
 
 //   -----and (&&)------  // повинні бути виконені обидві умови
+// true або false
 
 // console.log(5 == 5 && 6 > 3); //true
 // console.log(5 === 6 && 6 > 3); //false
@@ -180,13 +208,18 @@
 // console.log(6 + 3 >= 9 && 8 + 1 === 9);
 
 //   -----or (||)------ // або повинна бути виконана хоча б одна умова
+// лише для булевих значень true або false
 
 // console.log(5 + 5 === 25 || 2 * 2 === 6); //false
 // console.log(5 * 5 === 25 || 2 * 2 === 6); //true
 
-// console.log(5 * 5 === 25 || 2 * 2 === 6);
-
 //   -----not (!) ------ // НЕ
+
+// alert(!true); // false
+// alert(!0); // true
+
+// alert(!!"не пустий рядок"); // true
+// alert(!!null); // false
 
 // console.log(5 !== 4); //true
 
@@ -197,7 +230,7 @@
 // ----------------------------------//
 // ----------------------------------//
 // Умови if/else якщо/ще
-// ----------------------------------//
+// if(...) {} обчислює умову в дужках, ш якщо true - виконує блок коду//
 // ----------------------------------//
 
 //--- одинарні
@@ -242,8 +275,9 @@
 
 /// ------Тернарний оператор------/// той же самий if/else тільки в скороченій версії
 
-// 2 + 2 === 4 ? console.log(1) : console.log("2"); //1
-// 5 * 5 === 24 ? console.log("Si") : console.log("Not"); //Not
+// 2 + 2 === 4 ? console.log("1") : console.log("2"); // 1
+// 5 * 5 === 24 ? console.log(true) : console.log(false); // false
+// 3 * 8 === 20 ? console.log("Si") : console.log("Not"); //Not
 
 // якщо багато додатковиї умов:
 
@@ -310,6 +344,10 @@
 // ----------------------------------//
 // ----------------------------------//
 // switch/case аналог if/else
+// switch (змінна) {
+//   case 0:
+//     console.log(0);
+//     break;
 // ----------------------------------//
 // ----------------------------------//
 
@@ -370,7 +408,7 @@
 // ----------------------------------//
 // ----------------------------------//
 
-// const min = prompt("ВВедіть хвіліну");
+// const min = prompt("ВВедіть хвилину");
 
 // if (min >= 0 && min <= 14) {
 //   console.log("Перша чверть");
@@ -384,7 +422,9 @@
 //   console.log("Введіть іншу ціфру");
 // }
 
-// const value = prompt("Введіть назву товару").toLowerCase(); //для того, щоб не реагувало на регістр вводимих даних
+// const value = prompt("Введіть назву товару").toLowerCase(); //для того, щоб не
+// //реагувало на регістр вводимих даних
+
 // let cost;
 
 // switch (value) {
